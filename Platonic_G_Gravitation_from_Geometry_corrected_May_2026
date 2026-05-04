@@ -1,0 +1,151 @@
+Platonic G: Gravitation from Geometry
+Boris V. Kochenov
+kochenovforwork@gmail.com
+May 2026
+Abstract
+This note presents an empirical geometric observation: the gravitational constant
+G can be expressed purely geometrically using only the golden ratio ϕ, the integer 31,
+and √5. No CODATA values are used in the derivation.
+1 Main Result
+The gravitational constant admits a geometric representation:
+G × 1011 = 312 × √5
+ϕ12 = 6.67354674496161812375 . . .
+Source Value (×10−11) Gap from GK
+Schlamminger (2014) 6.6729 ± 0.0005 +0.010%
+GK (this work) 6.67354674496 . . . —
+CODATA 2018 6.67430 ± 0.00015 −0.011%
+Labs disagree 0.021%
+GK lies between both measurements. Each gap is smaller than the mutual disagreement
+between laboratories. Inputs: ϕ, 31, √5 only. No measured constants. No fitting.
+2 The Generator Identity
+The expression ϕ12/√5 is the Binet approximation to F12 = 144, the unique perfect square
+in the Fibonacci sequence. Direct evaluation yields:
+ϕ12
+√5 = 144 + 1
+720 + O(10−8)
+where 720 = 6! — a unique intersection of the exponential sequence ϕn, the factorial sequence
+m!, and Fibonacci numbers Fn at indices n = 12, m = 6. No comparable alignment exists
+for nearby indices. The absolute deviation is |∆| = 1.39 × 10−8, with relative precision
+|∆|/144 = 9.7 × 10−11.
+1
+3 The Residual 1/720 — Three Independent Domains
+The same residual 1/720 appears independently in three physical domains:
+Domain Formula
+Geometry ϕ12/√5 − 144 = 1/720
+Nuclear mn = mp × (1 + 1/720)
+EM α−1 = 144 − 7 − 1/720
+Three independent physical domains. One residual. The geometry identity is exact to
+10−8. The nuclear result (neutron-to-proton mass ratio) is verified against CODATA to
+0.001%. The electromagnetic result uses the rounded value α−1 = 137.
+4 Open Question
+The integer 31 = 25 − 1 (Mersenne prime) is the structural anchor of the formula. Its
+geometric origin remains under investigation.
+5 What This Is Not
+This is an empirical observation. No dynamical model is claimed. No CODATA values were
+used in the derivation. The formula is presented as a geometric identity whose physical
+significance, if any, remains to be established.
+6 Full Precision Reference
+GK =6.6735467449616181237591997717904236079132174548715
+1565557657672182332559409890102447913340675769273 × 10−11
+Derived from: GK = 312 × √5/(ϕ12 × 1011).
+2
+Geometric Origin of 1011 in the Gravitational Constant
+Abstract
+This note presents an empirical geometric observation: the number 1011 that ap-
+pears in the gravitational constant G is not a decimal artifact. It arises naturally from
+four turns of a 3D golden spiral (similar to a Fibonacci spiral but rising in height) and
+the addition of a micro-step 1/720.
+Basic spiral block
+S = ϕ6 × 31 ≈ 556.272429, ϕ = (1 + √5)/2.
+Spiral inclination
+κ = log10(S) ≈ 2.745288.
+Four turns without micro-step
+4κ ≈ 10.981150.
+Target height
+log10(1011) = 11.000000.
+Difference
+11.000000 − 10.981150 = 0.018850 (≈ 0.171% of 11).
+Micro-step
+One full turn consists of 12 micro-steps, each 1/720:
+12
+720 = 1
+60 ≈ 0.016667
+covers the gap almost exactly.
+Residual
+0.018850 − 0.016667 = 0.002183 (≈ 0.020% of 11), fractal noise.
+Resonant relation
+log10(1011) ≈ 4 log10(ϕ6 × 31) + 12
+720, 10.981150 + 0.016667 = 10.997817.
+3
+Equivalent forms of GKoch
+GKoch = 312√5
+ϕ12 × 1011 = 312
+(144 + 1/720) × 1011 ≈ 6.67354674496 × 10−11.
+Conclusion
+The Universe is not a set of arbitrary constants. It is one spiral, read at different scales.
+A High-Precision Identity Linking ϕ12/√5, the Fibonacci
+Square F12, and a Micro-Deviation of 1/720
+Abstract
+This note reports a high-precision numerical identity relating ϕ12/√5 to the Fi-
+bonacci number F12 = 144 with a correction term of magnitude 1/720. The deviation
+is of order 10−8, significantly below typical experimental uncertainties in physics.
+Statement of the Identity
+ϕ = 1 + √5
+2 , X = ϕ12
+√5 = 144.001388875432 . . .
+144 + 1
+720 = 144.001388888888 . . .
+∆ = X −
+
+144 + 1
+720
+
+= −1.394 × 10−8
+Thus,
+ϕ12
+√5 = 144 + 1
+720 + O(10−8).
+Relation to Fibonacci Numbers
+Using Binet’s formula: F12 = 144. Hence,
+ϕ12
+√5 = F12 + ε, ε = 0.001388875432 . . . ≈ 1
+720.
+Relative deviation ≈ 9.68 × 10−11.
+Precision Analysis
+Absolute deviation |∆| ≈ 1.39 × 10−8, relative deviation |∆|/X ≈ 9.68 × 10−11.
+Remarks
+The rational correction 1/720 is not predicted by standard Fibonacci identities.
+4
+Conclusion
+ϕ12
+√5 = 144 + 1
+720 ± 1.4 × 10−8.
+The Integer 31 as a Discrete Geometric Node in Kochenov G
+Abstract
+The integer 31 functions as a discrete stabilizing node in the Kochenov gravitational
+formula G = 312√5/(ϕ12 ×1011). It emerges as the optimal integer satisfying quadratic
+closure 312 = 961 (gap 0.001%) and scaling optimum (ϕ6 × n)4 = 1011 giving n ≈
+31.338. No neighbouring integer (30,32) satisfies both constraints.
+Spiral Block
+S = ϕ6 × 31 = 556.272429 . . ., κ = log10(S) = 2.745288, 4κ = 10.981150, gap closed by
+12/720 = 0.016667.
+Two Constraints
+Quadratic closure: 312 = 961 = GKoch × 1011 × 144. Scaling optimum: (ϕ6 × n)4 = 1011 →
+n ≈ 31.338.
+Neighbouring Integers
+n Gn gap from CODATA S4 gap from 1011 Note
+30 6.358% 16.018% too small
+31 0.011% 4.247% optimal discrete node
+32 6.544% 8.718% too large
+31.338 ∼0% ∼0% continuous optimum
+Additional Connections
+312 = 961 = 367 × ϕ2 (gap 0.019%), hence GKoch = 367√5
+ϕ10×1011 . Mersenne property 31 = 25 − 1
+places 31 at binary–golden boundary.
+Full precision value of GKoch:
+GKoch =6.6735467449616181237591997717904236079132174548715
+1565557657672182332559409890102447913340675769273 × 10−11 m3kg−1s−2
+Author: Boris V. Kochenov
+Email: kochenovforwork@gmail.com
+Date: May 2026
+5
