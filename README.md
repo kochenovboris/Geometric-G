@@ -2085,6 +2085,7 @@ Res = | FG(n1) - FG(n2) | / FG(n_mid)
 # Far-resonant masses attract weaker.
 
 # END OF KSP GEOMETRIC GRAVITY ENGINE v1.0
+https://github.com/kochenovboris/Geometric-G/blob/main/G%20from%20Earth%E2%80%99s%20Geometry.pdf
 
 
 
