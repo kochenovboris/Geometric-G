@@ -1,0 +1,43 @@
+Speed of Light, Gravity, and Mass from Geometry.
+
+Author: Kochenov Boris. V.
+18.05.2026. Moscow.
+kochenovforwork@gmail.com
+
+1. Speed of light (m/s):
+
+c_core = 144³ × 100 = 298 598 400 m/s   c_SI = 299 792 458 m/s  Δ% = 0.398%
+
+c_koch ≈ (φ⁶ × 31)³ × √3 × (1 + 4/720) = 299 798 395 m/s   c_SI = 299 792 458 m/s  Δ ≈ 0.002%. (5937m/s)
+
+2. Gravitational constant (m³·kg⁻¹·s⁻²):
+
+G_core = 31²/144 ≈ 6.67361111111e-11 | Δ NIST'26: -0.000259 (-0.0039%) | Δ CODATA'22: -0.000689 (-0.0103%)
+
+G_Koch = (31²×√5)/(φ¹²×10¹¹) ≈ 6.67354674496e-11 | Δ NIST'26: -0.000323 (-0.00484%) | Δ CODATA'22: -0.000753 (-0.01129%)
+
+
+3. Proton mass (MeV/c²):
+
+m_p = 31² - 1000/(144-100) = 961 - 1000/44 ≈ 938.272727...   CODATA value: 938.2720813   Gap: 0.0000688%
+
+
+4. Neutron‑to‑proton mass ratio:
+
+m_n/m_p ≈ 1 + 1/720 = 1.001388888...   CODATA m_n/m_p = 1.001378419...   Δ = +0.00001047 (0.00105%)
+
+
+5. Kochenov Identity:
+
+φ¹²/√5 = 144 + 1/720 + O(10⁻⁸)
+
+Numerically:
+ϵ_Koch = 144 - φ¹²/√5 = -0.001388875493...
+δ_Koch = -1/720 = -0.001388888889...
+ε_rem = δ_Koch - ϵ_Koch = -1.33956 × 10⁻⁸
+|ε_rem| ≈ 1.34 × 10⁻⁸
+
+Thus:
+φ¹²/√5 = 144 + 1/720 − 1.33956 × 10⁻⁸
+
+
