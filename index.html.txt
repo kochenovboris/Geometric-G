@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kochenov Geometric Framework (KSP)</title>
+    <meta name="description" content="Geometric derivation of G, c, v⊕, and nine-planet solar system without Newtonian mass or G.">
+    <meta name="keywords" content="Kochenov, Geometric G, speed of light, nine planets, Pluto, Fibonacci 144, synchronization lock 720">
+    <meta name="author" content="Boris V. Kochenov">
+</head>
+<body>
+    <h1>Kochenov Geometric Framework (KSP)</h1>
+    <p><strong>Core formulas:</strong></p>
+    <ul>
+        <li>31³ / 1000 ≈ v⊕ (Earth's orbital speed, deviation 0.02%)</li>
+        <li>31² / 144 ≈ G × 10¹¹ (gravitational constant, deviation 0.00073%)</li>
+        <li>144³ × 100 ≈ c (speed of light, deviation 0.4%)</li>
+        <li>100 AU = (c × 86400) / √3 (light cube)</li>
+    </ul>
+    <p><strong>Publications on Zenodo:</strong></p>
+    <ul>
+        <li><a href="https://zenodo.org/records/20412611">The Nine-Planet Solar System</a></li>
+        <li><a href="https://zenodo.org/records/20326444">Speed of Light, Gravity, and Mass from Geometry</a></li>
+        <li><a href="https://zenodo.org/records/20414807">ϕ¹²/√5 = 144 + 1/720</a></li>
+    </ul>
+    <hr>
+    <p><em>I am almost joking. But the numbers keep working.</em></p>
+    <p>Boris V. Kochenov, May 2026</p>
+</body>
+</html>
