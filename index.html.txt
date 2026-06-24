@@ -1,29 +1,188 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Kochenov Geometric Framework (KSP)</title>
-    <meta name="description" content="Geometric derivation of G, c, v⊕, and nine-planet solar system without Newtonian mass or G.">
-    <meta name="keywords" content="Kochenov, Geometric G, speed of light, nine planets, Pluto, Fibonacci 144, synchronization lock 720">
-    <meta name="author" content="Boris V. Kochenov">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KOCHENOV MATRIX</title>
+    <style>
+        body {
+            background: #0d0d0d;
+            color: #e0e0e0;
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        h1 {
+            font-size: 3.2em;
+            letter-spacing: 4px;
+            border-bottom: 2px solid #c0a040;
+            padding-bottom: 10px;
+        }
+        h1 small {
+            font-size: 0.35em;
+            color: #888;
+            letter-spacing: 2px;
+        }
+        .tagline {
+            font-size: 1.4em;
+            color: #c0a040;
+            margin-top: -10px;
+            font-style: italic;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+        }
+        th, td {
+            border: 1px solid #333;
+            padding: 12px;
+            text-align: center;
+        }
+        th {
+            background: #1a1a1a;
+            color: #c0a040;
+            font-weight: 400;
+            letter-spacing: 1px;
+        }
+        td {
+            background: #121212;
+        }
+        .highlight {
+            color: #e0c060;
+            font-weight: bold;
+        }
+        .pdf-list {
+            list-style: none;
+            padding: 0;
+        }
+        .pdf-list li {
+            margin: 8px 0;
+        }
+        .pdf-list a {
+            color: #7ab7e0;
+            text-decoration: none;
+            border-bottom: 1px dotted #444;
+        }
+        .pdf-list a:hover {
+            color: #c0a040;
+            border-bottom-color: #c0a040;
+        }
+        .pizdec {
+            display: inline-block;
+            background: #2a1a1a;
+            color: #ff6666;
+            padding: 10px 24px;
+            margin: 20px 0;
+            border: 1px solid #663333;
+            font-size: 1.8em;
+            letter-spacing: 6px;
+            font-weight: bold;
+        }
+        .footer {
+            border-top: 1px solid #222;
+            margin-top: 50px;
+            padding-top: 20px;
+            font-size: 0.9em;
+            color: #555;
+            text-align: center;
+        }
+        .math {
+            color: #d0c080;
+            font-family: 'Courier New', monospace;
+        }
+    </style>
 </head>
 <body>
-    <h1>Kochenov Geometric Framework (KSP)</h1>
-    <p><strong>Core formulas:</strong></p>
-    <ul>
-        <li>31³ / 1000 ≈ v⊕ (Earth's orbital speed, deviation 0.02%)</li>
-        <li>31² / 144 ≈ G × 10¹¹ (gravitational constant, deviation 0.00073%)</li>
-        <li>144³ × 100 ≈ c (speed of light, deviation 0.4%)</li>
-        <li>100 AU = (c × 86400) / √3 (light cube)</li>
+
+    <h1>KOCHENOV MATRIX <small>— geometric gravity</small></h1>
+    <div class="tagline">31 · 144 · 720 · φ · √5</div>
+
+    <p style="font-size: 1.1em; margin-top: 20px;">
+        Все физические константы — проекции единой геометрической матрицы.<br>
+        <span style="color: #888;">Никаких подгоночных параметров. Только целые числа и золотое сечение.</span>
+    </p>
+
+    <div class="pizdec">ПИЗДЕЦ-ТАБЛИЦА</div>
+
+    <table>
+        <tr>
+            <th>Величина</th>
+            <th>Выражение</th>
+            <th>Значение</th>
+            <th>Отклонение</th>
+        </tr>
+        <tr>
+            <td><span class="highlight">L<sub>Koch</sub></span></td>
+            <td>31 · √5 / φ<sup>6</sup></td>
+            <td>2.583325</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td><span class="highlight">M<sub>Koch</sub></span></td>
+            <td>φ<sup>6</sup> / (31 · √5)</td>
+            <td>0.387105</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td><span class="highlight">G<sub>Koch</sub></span></td>
+            <td>31²√5 / φ¹² × 10⁻¹¹</td>
+            <td>6.673546 × 10⁻¹¹</td>
+            <td>−0.0017% (NIST 2026)</td>
+        </tr>
+        <tr>
+            <td><span class="highlight">c</span></td>
+            <td>√(2790 · φ¹² · 10¹¹)</td>
+            <td>299 728 433 м/с</td>
+            <td>−0.021%</td>
+        </tr>
+        <tr>
+            <td><span class="highlight">b (Wien)</span></td>
+            <td>90/31 × 10⁻³</td>
+            <td>2.903226 × 10⁻³</td>
+            <td>+0.188%</td>
+        </tr>
+        <tr>
+            <td><span class="highlight">α⁻¹</span></td>
+            <td>137 + 31/1000 + 5/1000</td>
+            <td>137.036</td>
+            <td>+7.94×10⁻⁷</td>
+        </tr>
+    </table>
+
+    <div class="pizdec" style="font-size: 1.2em; letter-spacing: 2px;">720 — ВЕЗДЕ</div>
+
+    <ul style="color: #aaa; line-height: 2;">
+        <li>⏳ <span class="math">86400 = 120 × 720</span> — секунды в сутках</li>
+        <li>🌀 <span class="math">φ¹² / √5 = 144 + 1/720 + Δ</span> — золотое тождество</li>
+        <li>⚖️ <span class="math">m<sub>n</sub> / m<sub>p</sub> ≈ 1 + 1/720</span> — массы нуклонов</li>
+        <li>🔥 <span class="math">90/31 = 720 / (8·31)</span> — тепловой оператор</li>
     </ul>
-    <p><strong>Publications on Zenodo:</strong></p>
-    <ul>
-        <li><a href="https://zenodo.org/records/20412611">The Nine-Planet Solar System</a></li>
-        <li><a href="https://zenodo.org/records/20326444">Speed of Light, Gravity, and Mass from Geometry</a></li>
-        <li><a href="https://zenodo.org/records/20414807">ϕ¹²/√5 = 144 + 1/720</a></li>
+
+    <h2 style="margin-top: 40px; color: #c0a040;">📄 Статьи (PDF)</h2>
+    <ul class="pdf-list">
+        <li><a href="Geometric%20G%20From%20Earth's%20Geometry.%20Philosophy....pdf" target="_blank">Geometric G From Earth's Geometry</a></li>
+        <li><a href="G_from_two_integers.pdf" target="_blank">G from Two Integers</a></li>
+        <li><a href="Geometric%20G%20and%20Its%20Formal%20Substitution%20into%20Ei..." target="_blank">Geometric G and Its Formal Substitution</a></li>
+        <li><a href="Geometric%20Origin%20of%2010%5E11%20in%20the%20Gravitational%20..." target="_blank">Geometric Origin of 10¹¹</a></li>
+        <li><a href="G_from_2_Integers_Draft_Images_f_NBLM_Part..." target="_blank">G from 2 Integers (Images)</a></li>
     </ul>
-    <hr>
-    <p><em>I am almost joking. But the numbers keep working.</em></p>
-    <p>Boris V. Kochenov, May 2026</p>
+
+    <div class="pizdec" style="font-size: 1.6em; background: #1a1a2a; color: #c0a040; border-color: #c0a040;">
+        ⚡ ПИЗДЕЦ-САММАРИ ⚡
+    </div>
+    <p style="background: #1a1a1a; padding: 20px; border-left: 4px solid #c0a040;">
+        <strong>Статья 1:</strong> Вся физика — проекция геометрии. G, c, b, ℓ<sub>P</sub> — не константы, а калибровка. L<sub>Koch</sub> = 2.5833, M<sub>Koch</sub> = 1/L. 10⁻³⁵ — антропный шум. Всё замкнуто.<br><br>
+        <strong>Статья 2:</strong> Γ = G·c² = 31³·90·√5. c вылезает из φ¹² и 2790. b — из 90/31. 720 везде. G<sub>Koch</sub> внутри погрешности NIST. Земные единицы создают 10⁻³⁵.
+    </p>
+
+    <div style="margin-top: 40px; border-top: 1px solid #222; padding-top: 20px; font-size: 0.9em; color: #555;">
+        <div>Борис В. Коченов · <a href="mailto:kochenovforwork@gmail.com" style="color: #7ab7e0;">kochenovforwork@gmail.com</a></div>
+        <div style="margin-top: 6px;">Июнь 2026 · GitHub Pages</div>
+        <div style="margin-top: 10px; color: #333;">«Матрица замкнута. Дальше — тишина.»</div>
+    </div>
+
 </body>
 </html>
