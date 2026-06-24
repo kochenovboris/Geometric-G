@@ -1,298 +1,287 @@
-!DOCTYPE html
-html lang=ru
-head
-    meta charset=UTF-8 
-    meta name=viewport content=width=device-width, initial-scale=1.0 
-    titleKOCHENOV MATRIX · GEOMETRIC-Gtitle
-    style
-         {
-            margin 0;
-            padding 0;
-            box-sizing border-box;
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KOCHENOV MATRIX · GEOMETRIC-G</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
         body {
-            background #0b0b0f;
-            color #c8c8d0;
-            font-family 'Courier New', 'Segoe UI', monospace;
-            line-height 1.6;
-            padding 2rem 1.5rem;
-            max-width 1100px;
-            margin 0 auto;
+            background: #0b0b0f;
+            color: #c8c8d0;
+            font-family: 'Courier New', 'Segoe UI', monospace;
+            line-height: 1.6;
+            padding: 2rem 1.5rem;
+            max-width: 1100px;
+            margin: 0 auto;
         }
         .matrix-border {
-            border 1px solid #2a2a3a;
-            padding 2rem 1.8rem;
-            border-radius 12px;
-            background #0f0f16;
-            box-shadow 0 0 40px rgba(80, 200, 120, 0.02);
+            border: 1px solid #2a2a3a;
+            padding: 2rem 1.8rem;
+            border-radius: 12px;
+            background: #0f0f16;
+            box-shadow: 0 0 40px rgba(80, 200, 120, 0.02);
         }
         h1 {
-            font-size 2.8rem;
-            font-weight 400;
-            letter-spacing 6px;
-            color #b0e0b0;
-            text-shadow 0 0 12px rgba(100, 200, 150, 0.1);
-            border-bottom 1px solid #2a3a2a;
-            padding-bottom 0.5rem;
-            display flex;
-            flex-wrap wrap;
-            justify-content space-between;
-            align-items flex-end;
+            font-size: 2.8rem;
+            font-weight: 400;
+            letter-spacing: 6px;
+            color: #b0e0b0;
+            text-shadow: 0 0 12px rgba(100, 200, 150, 0.1);
+            border-bottom: 1px solid #2a3a2a;
+            padding-bottom: 0.5rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-end;
         }
         h1 small {
-            font-size 0.9rem;
-            color #5a7a6a;
-            letter-spacing 2px;
+            font-size: 0.9rem;
+            color: #5a7a6a;
+            letter-spacing: 2px;
         }
         .tagline {
-            font-size 1.1rem;
-            color #7a9a8a;
-            margin 0.8rem 0 1.8rem 0;
-            padding-left 0.2rem;
-            border-left 3px solid #3a5a4a;
-            padding-left 1rem;
+            font-size: 1.1rem;
+            color: #7a9a8a;
+            margin: 0.8rem 0 1.8rem 0;
+            padding-left: 0.2rem;
+            border-left: 3px solid #3a5a4a;
+            padding-left: 1rem;
         }
         .status-led {
-            display inline-block;
-            background #1a3a2a;
-            color #80d0a0;
-            padding 0.2rem 1.2rem;
-            border-radius 20px;
-            font-size 0.8rem;
-            letter-spacing 2px;
-            border 1px solid #2a5a3a;
+            display: inline-block;
+            background: #1a3a2a;
+            color: #80d0a0;
+            padding: 0.2rem 1.2rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            border: 1px solid #2a5a3a;
         }
         h2 {
-            font-size 1.6rem;
-            font-weight 300;
-            color #b0d0b0;
-            margin 2.2rem 0 1rem 0;
-            letter-spacing 3px;
-            border-bottom 1px dashed #2a3a2a;
-            padding-bottom 0.4rem;
+            font-size: 1.6rem;
+            font-weight: 300;
+            color: #b0d0b0;
+            margin: 2.2rem 0 1rem 0;
+            letter-spacing: 3px;
+            border-bottom: 1px dashed #2a3a2a;
+            padding-bottom: 0.4rem;
         }
         .pizdec-table {
-            width 100%;
-            border-collapse collapse;
-            margin 1.5rem 0;
-            font-size 0.9rem;
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            font-size: 0.9rem;
         }
         .pizdec-table th {
-            text-align left;
-            padding 0.7rem 0.5rem;
-            background #16161f;
-            color #8aaa9a;
-            font-weight 300;
-            letter-spacing 1px;
-            border-bottom 2px solid #2a3a2a;
+            text-align: left;
+            padding: 0.7rem 0.5rem;
+            background: #16161f;
+            color: #8aaa9a;
+            font-weight: 300;
+            letter-spacing: 1px;
+            border-bottom: 2px solid #2a3a2a;
         }
         .pizdec-table td {
-            padding 0.6rem 0.5rem;
-            border-bottom 1px solid #1a1a26;
+            padding: 0.6rem 0.5rem;
+            border-bottom: 1px solid #1a1a26;
         }
         .highlight {
-            color #d0e8b0;
-            font-weight 400;
+            color: #d0e8b0;
+            font-weight: 400;
         }
         .math {
-            color #b0c8b0;
-            font-family 'Courier New', monospace;
+            color: #b0c8b0;
+            font-family: 'Courier New', monospace;
         }
         .badge {
-            display inline-block;
-            background #1a2a22;
-            color #70b090;
-            padding 0.1rem 0.8rem;
-            border-radius 12px;
-            font-size 0.7rem;
-            letter-spacing 1px;
-            border 1px solid #2a4a3a;
+            display: inline-block;
+            background: #1a2a22;
+            color: #70b090;
+            padding: 0.1rem 0.8rem;
+            border-radius: 12px;
+            font-size: 0.7rem;
+            letter-spacing: 1px;
+            border: 1px solid #2a4a3a;
         }
         .pdf-list {
-            list-style none;
-            padding 0;
+            list-style: none;
+            padding: 0;
         }
         .pdf-list li {
-            padding 0.5rem 0.4rem;
-            border-bottom 1px solid #1a1a26;
-            display flex;
-            align-items center;
-            gap 0.8rem;
-            flex-wrap wrap;
+            padding: 0.5rem 0.4rem;
+            border-bottom: 1px solid #1a1a26;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            flex-wrap: wrap;
         }
         .pdf-list a {
-            color #8abbd0;
-            text-decoration none;
-            border-bottom 1px dotted #3a5a6a;
-            transition 0.15s;
-            word-break break-word;
+            color: #8abbd0;
+            text-decoration: none;
+            border-bottom: 1px dotted #3a5a6a;
+            transition: 0.15s;
+            word-break: break-word;
         }
-        .pdf-list ahover {
-            color #d0e8b0;
-            border-bottom-color #70b090;
+        .pdf-list a:hover {
+            color: #d0e8b0;
+            border-bottom-color: #70b090;
         }
         .pdf-tag {
-            color #5a7a6a;
-            font-size 0.7rem;
-            background #16161f;
-            padding 0.1rem 0.6rem;
-            border-radius 10px;
-            border 1px solid #2a2a3a;
+            color: #5a7a6a;
+            font-size: 0.7rem;
+            background: #16161f;
+            padding: 0.1rem 0.6rem;
+            border-radius: 10px;
+            border: 1px solid #2a2a3a;
         }
         .footer {
-            margin-top 3rem;
-            padding-top 1.2rem;
-            border-top 1px solid #1a1a26;
-            font-size 0.85rem;
-            color #4a5a5a;
-            text-align center;
-            letter-spacing 1px;
+            margin-top: 3rem;
+            padding-top: 1.2rem;
+            border-top: 1px solid #1a1a26;
+            font-size: 0.85rem;
+            color: #4a5a5a;
+            text-align: center;
+            letter-spacing: 1px;
         }
-        .pizdec-big {
-            display inline-block;
-            background #1a1a22;
-            color #b0d0a0;
-            padding 0.2rem 1.6rem;
-            border-radius 30px;
-            font-size 1.4rem;
-            letter-spacing 8px;
-            border 1px solid #2a4a3a;
-            margin 0.8rem 0;
-        }
-        @media (max-width 600px) {
+        @media (max-width: 600px) {
             h1 {
-                font-size 1.8rem;
-                flex-direction column;
-                align-items flex-start;
-                gap 0.3rem;
+                font-size: 1.8rem;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.3rem;
             }
             .matrix-border {
-                padding 1.2rem 1rem;
+                padding: 1.2rem 1rem;
             }
         }
-    style
-head
-body
+    </style>
+</head>
+<body>
 
-    div class=matrix-border
+    <div class="matrix-border">
 
-        !-- ШАПКА --
-        h1
-            span⧫ KOCHENOV MATRIXspan
-            smallv2.0 · GEOMETRIC-Gsmall
-        h1
-        div class=tagline
-            span class=status-led● ACTIVEspan
+        <!-- ШАПКА -->
+        <h1>
+            <span>⧫ KOCHENOV MATRIX</span>
+            <small>v2.0 · GEOMETRIC-G</small>
+        </h1>
+        <div class="tagline">
+            <span class="status-led">● ACTIVE</span>
             &nbsp; 31 · 144 · 720 · φ · √5 &nbsp;
-            span class=badgeNO CODATAspan
-        div
+            <span class="badge">NO CODATA</span>
+        </div>
 
-        !-- КЛЮЧЕВАЯ ФОРМУЛА --
-        div style=background#12121c; padding1.2rem 1.5rem; border-radius8px; margin1.2rem 0; border-left4px solid #3a6a4a;
-            div style=font-size1.2rem; color#b0d0b0;
-                GsubKochsub = span class=math31² · √5  (φ¹² · 10¹¹)span
-            div
-            div style=color#6a8a7a; font-size0.9rem; margin-top0.2rem;
-                = 6.67354674496… × 10⁻¹¹ &nbsp; span class=badgeABS.IRONspan
-            div
-        div
+        <!-- КЛЮЧЕВАЯ ФОРМУЛА -->
+        <div style="background:#12121c; padding:1.2rem 1.5rem; border-radius:8px; margin:1.2rem 0; border-left:4px solid #3a6a4a;">
+            <div style="font-size:1.2rem; color:#b0d0b0;">
+                G<sub>Koch</sub> = <span class="math">31² · √5 / (φ¹² · 10¹¹)</span>
+            </div>
+            <div style="color:#6a8a7a; font-size:0.9rem; margin-top:0.2rem;">
+                = 6.67354674496… × 10⁻¹¹ &nbsp; <span class="badge">ABS.IRON</span>
+            </div>
+        </div>
 
-        !-- ПИЗДЕЦ-ТАБЛИЦА --
-        h2⚡ ПИЗДЕЦ-ТАБЛИЦАh2
-        table class=pizdec-table
-            thead
-                tr
-                    thВеличинаth
-                    thВыражениеth
-                    thЗначениеth
-                    thСтатусth
-                tr
-            thead
-            tbody
-                tr
-                    tdspan class=highlightLsubKochsubspantd
-                    td class=math31·√5  φ⁶td
-                    td2.583325td
-                    tdspan class=badgeЯДРОspantd
-                tr
-                tr
-                    tdspan class=highlightMsubKochsubspantd
-                    td class=mathφ⁶  (31·√5)td
-                    td0.387105td
-                    tdspan class=badgeЯДРОspantd
-                tr
-                tr
-                    tdspan class=highlightGsubKochsubspantd
-                    td class=math31²√5  φ¹² · 10⁻¹¹td
-                    td6.673546×10⁻¹¹td
-                    tdspan class=badgeIRONspan −0.0017%td
-                tr
-                tr
-                    tdspan class=highlightc (геом.)spantd
-                    td class=math√(2790·φ¹²·10¹¹)td
-                    td299 728 433 мсtd
-                    tdspan class=badgeSTEELspan −0.021%td
-                tr
-                tr
-                    tdspan class=highlightb (Wien)spantd
-                    td class=math9031 · 10⁻³td
-                    td2.903226×10⁻³td
-                    tdspan class=badgeSTEELspan +0.188%td
-                tr
-                tr
-                    tdspan class=highlightα⁻¹spantd
-                    td class=math137 + 311000 + 51000td
-                    td137.036td
-                    tdspan class=badgeABS.IRONspantd
-                tr
-                tr
-                    tdspan class=highlight720-замокspantd
-                    td class=mathφ¹²√5 = 144 + 1720td
-                    td∆ ≈ 1.34×10⁻⁸td
-                    tdspan class=badgeABS.IRONspantd
-                tr
-            tbody
-        table
+        <!-- ПИЗДЕЦ-ТАБЛИЦА -->
+        <h2>⚡ ПИЗДЕЦ-ТАБЛИЦА</h2>
+        <table class="pizdec-table">
+            <thead>
+                <tr>
+                    <th>Величина</th>
+                    <th>Выражение</th>
+                    <th>Значение</th>
+                    <th>Статус</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><span class="highlight">L<sub>Koch</sub></span></td>
+                    <td class="math">31·√5 / φ⁶</td>
+                    <td>2.583325</td>
+                    <td><span class="badge">ЯДРО</span></td>
+                </tr>
+                <tr>
+                    <td><span class="highlight">M<sub>Koch</sub></span></td>
+                    <td class="math">φ⁶ / (31·√5)</td>
+                    <td>0.387105</td>
+                    <td><span class="badge">ЯДРО</span></td>
+                </tr>
+                <tr>
+                    <td><span class="highlight">G<sub>Koch</sub></span></td>
+                    <td class="math">31²√5 / φ¹² · 10⁻¹¹</td>
+                    <td>6.673546×10⁻¹¹</td>
+                    <td><span class="badge">IRON</span> −0.0017%</td>
+                </tr>
+                <tr>
+                    <td><span class="highlight">c (геом.)</span></td>
+                    <td class="math">√(2790·φ¹²·10¹¹)</td>
+                    <td>299 728 433 м/с</td>
+                    <td><span class="badge">STEEL</span> −0.021%</td>
+                </tr>
+                <tr>
+                    <td><span class="highlight">b (Wien)</span></td>
+                    <td class="math">90/31 · 10⁻³</td>
+                    <td>2.903226×10⁻³</td>
+                    <td><span class="badge">STEEL</span> +0.188%</td>
+                </tr>
+                <tr>
+                    <td><span class="highlight">α⁻¹</span></td>
+                    <td class="math">137 + 31/1000 + 5/1000</td>
+                    <td>137.036</td>
+                    <td><span class="badge">ABS.IRON</span></td>
+                </tr>
+                <tr>
+                    <td><span class="highlight">720-замок</span></td>
+                    <td class="math">φ¹²/√5 = 144 + 1/720</td>
+                    <td>∆ ≈ 1.34×10⁻⁸</td>
+                    <td><span class="badge">ABS.IRON</span></td>
+                </tr>
+            </tbody>
+        </table>
 
-        !-- 720 ВЕЗДЕ --
-        div style=background#12121c; padding1rem 1.5rem; border-radius8px; margin1.5rem 0; border1px solid #2a3a2a;
-            div style=displayflex; flex-wrapwrap; gap0.8rem 2rem; font-size0.95rem;
-                span⏳ span class=math86400 = 120·720spanspan
-                span🌀 span class=mathφ¹²√5 = 144 + 1720spanspan
-                span⚖️ span class=mathmₙmₚ ≈ 1 + 1720spanspan
-                span🔥 span class=math9031 = 720(8·31)spanspan
-            div
-        div
+        <!-- 720 ВЕЗДЕ -->
+        <div style="background:#12121c; padding:1rem 1.5rem; border-radius:8px; margin:1.5rem 0; border:1px solid #2a3a2a;">
+            <div style="display:flex; flex-wrap:wrap; gap:0.8rem 2rem; font-size:0.95rem;">
+                <span>⏳ <span class="math">86400 = 120·720</span></span>
+                <span>🌀 <span class="math">φ¹²/√5 = 144 + 1/720</span></span>
+                <span>⚖️ <span class="math">mₙ/mₚ ≈ 1 + 1/720</span></span>
+                <span>🔥 <span class="math">90/31 = 720/(8·31)</span></span>
+            </div>
+        </div>
 
-        !-- БИБЛИОТЕКА PDF (исправленные ссылки) --
-        h2📄 БИБЛИОТЕКА МАТРИЦЫh2
-        ul class=pdf-list
-            lia href=Geometric%20G%20From%20Earth%27s%20Geometry.%20Philosophy...pdf target=_blankGeometric G From Earth's Geometrya span class=pdf-tagядроspanli
-            lia href=G_from_two_integers.pdf target=_blankG from Two Integersa span class=pdf-tag31²144spanli
-            lia href=Geometric%20G%20and%20Its%20Formal%20Substitution%20into%20Ei...pdf target=_blankGeometric G — Formal Substitutiona span class=pdf-tagЭйнштейнspanli
-            lia href=Geometric%20Origin%20of%2010%5E11%20in%20the%20Gravitational%20...pdf target=_blankGeometric Origin of 10¹¹a span class=pdf-tagспиральspanli
-            lia href=G_from_2_Integers_Draft_Images_f_NBLM_Part...pdf target=_blankG from 2 Integers (Images)a span class=pdf-tagчерновикspanli
-            lia href=G%20from%20Earth%E2%80%99s%20Geometry.pdf target=_blankG from Earth’s Geometry (PDF)a span class=pdf-tagосновнойspanli
-        ul
+        <!-- БИБЛИОТЕКА PDF -->
+        <h2>📄 БИБЛИОТЕКА МАТРИЦЫ</h2>
+        <ul class="pdf-list">
+            <li><a href="Geometric%20G%20From%20Earth's%20Geometry.%20Philosophy...pdf" target="_blank">Geometric G From Earth's Geometry</a> <span class="pdf-tag">ядро</span></li>
+            <li><a href="G_from_two_integers.pdf" target="_blank">G from Two Integers</a> <span class="pdf-tag">31²/144</span></li>
+            <li><a href="Geometric%20G%20and%20Its%20Formal%20Substitution%20into%20Ei...pdf" target="_blank">Geometric G — Formal Substitution</a> <span class="pdf-tag">Эйнштейн</span></li>
+            <li><a href="Geometric%20Origin%20of%2010%5E11%20in%20the%20Gravitational%20...pdf" target="_blank">Geometric Origin of 10¹¹</a> <span class="pdf-tag">спираль</span></li>
+            <li><a href="G_from_2_Integers_Draft_Images_f_NBLM_Part...pdf" target="_blank">G from 2 Integers (Images)</a> <span class="pdf-tag">черновик</span></li>
+            <li><a href="G%20from%20Earth%E2%80%99s%20Geometry.pdf" target="_blank">G from Earth’s Geometry (PDF)</a> <span class="pdf-tag">основной</span></li>
+        </ul>
 
-        !-- КОРОТКОЕ ПИЗДЕЦ-САММАРИ --
-        div style=background#111118; padding1.2rem 1.5rem; border-radius8px; margin1.8rem 0; border-left4px solid #6a8a5a;
-            div style=displayflex; gap1.2rem; flex-wrapwrap; justify-contentspace-between; align-itemscenter;
-                span style=font-size1.3rem; color#b0d0a0;⚡ ПИЗДЕЦ-САММАРИspan
-                span style=font-size0.9rem; color#7a9a8a;«Вся физика — проекция геометрии»span
-            div
-            div style=margin-top0.5rem; font-size0.95rem; color#a0b8a8;
-                span class=mathLKochspan = 2.5833 · span class=mathMKochspan = 0.3871 · span class=mathG_Kochspan внутри NIST 2026 · span class=mathcspan из span class=mathφ¹²span · span class=mathbspan из span class=math9031span · span class=mathα⁻¹span = 137.036 · span class=math720span — везде
-            div
-        div
+        <!-- ПИЗДЕЦ-САММАРИ -->
+        <div style="background:#111118; padding:1.2rem 1.5rem; border-radius:8px; margin:1.8rem 0; border-left:4px solid #6a8a5a;">
+            <div style="display:flex; gap:1.2rem; flex-wrap:wrap; justify-content:space-between; align-items:center;">
+                <span style="font-size:1.3rem; color:#b0d0a0;">⚡ ПИЗДЕЦ-САММАРИ</span>
+                <span style="font-size:0.9rem; color:#7a9a8a;">«Вся физика — проекция геометрии»</span>
+            </div>
+            <div style="margin-top:0.5rem; font-size:0.95rem; color:#a0b8a8;">
+                <span class="math">LKoch</span> = 2.5833 · <span class="math">MKoch</span> = 0.3871 · <span class="math">G_Koch</span> внутри NIST 2026 · <span class="math">c</span> из <span class="math">φ¹²</span> · <span class="math">b</span> из <span class="math">90/31</span> · <span class="math">α⁻¹</span> = 137.036 · <span class="math">720</span> — везде
+            </div>
+        </div>
 
-        !-- ФУТЕР --
-        div class=footer
-            divБорис В. Коченов · a href=mailtokochenovforwork@gmail.com style=color#7a9a8a;kochenovforwork@gmail.comadiv
-            div style=margin-top0.3rem;Июнь 2026 · GitHub Pagesdiv
-            div style=margin-top0.6rem; color#3a4a4a;«Матрица замкнута. Дальше — тишина.»div
-        div
+        <!-- ФУТЕР -->
+        <div class="footer">
+            <div>Борис В. Коченов · <a href="mailto:kochenovforwork@gmail.com" style="color:#7a9a8a;">kochenovforwork@gmail.com</a></div>
+            <div style="margin-top:0.3rem;">Июнь 2026 · GitHub Pages</div>
+            <div style="margin-top:0.6rem; color:#3a4a4a;">«Матрица замкнута. Дальше — тишина.»</div>
+        </div>
 
-    div
-body
-html
+    </div>
+</body>
+</html>
